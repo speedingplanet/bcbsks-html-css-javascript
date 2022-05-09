@@ -83,10 +83,6 @@ export class Vehicle {
   }
   */
 
-  speed() {
-    return this.speed;
-  }
-
   get mileage() {
     return this._odometer;
   }

@@ -1,4 +1,4 @@
-/* eslint-disable node/handle-callback-err */
+/* eslint-disable n/handle-callback-err */
 let baseUrl = 'http://localhost:8001/users';
 
 let responsePromise = fetch(baseUrl);

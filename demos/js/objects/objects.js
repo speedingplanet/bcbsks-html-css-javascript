@@ -76,6 +76,7 @@ const { firstName, city } = person;
 // Assignment
 let foo = 'whatever';
 let o1 = {
+  // eslint-disable-next-line object-shorthand
   foo: foo,
 };
 let o2 = {

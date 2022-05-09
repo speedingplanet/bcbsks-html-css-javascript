@@ -23,26 +23,26 @@ const multiLineReturn = () => (
   'three ' +
   'four ' +
   'five ' +
-  'ten ' );
+  'ten ');
 
 function generatePersonFunction(firstName, lastName) {
   return {
-    firstName: firstName,
-    lastName: lastName,
+    firstName,
+    lastName,
   };
 }
 
 // A one-liner that returns an object can be confusing.
 // One-liner means (), but it's returning an object, so {} inside ()
 const generatePersonArrow = (firstName, lastName) => ({
-  firstName: firstName,
-  lastName: lastName,
+  firstName,
+  lastName,
 });
 
 const generatePersonArrowWithReturn = (firstName, lastName) => {
   return {
-    firstName: firstName,
-    lastName: lastName,
+    firstName,
+    lastName,
   };
 };
 
