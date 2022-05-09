@@ -1,4 +1,4 @@
-function employeeFactory( firstName, lastName ) {
+function employeeFactory(firstName, lastName) {
   let salary = 50000;
   return {
     firstName: firstName,
@@ -6,14 +6,14 @@ function employeeFactory( firstName, lastName ) {
     getSalary() {
       return salary;
     },
-    setSalary( s ) {
-      s = Number( s );
-      if ( s && s >= salary ) {
+    setSalary(s) {
+      s = Number(s);
+      if (s && s >= salary) {
         salary = s;
       }
     },
   };
 }
 
-const emp1 = employeeFactory( 'John', 'Paxton' );
-console.log( "employee 1's salary: ", emp1.getSalary() );
+const emp1 = employeeFactory('John', 'Paxton');
+console.log("employee 1's salary: ", emp1.getSalary());

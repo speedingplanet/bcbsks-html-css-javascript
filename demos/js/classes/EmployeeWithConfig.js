@@ -5,8 +5,8 @@ class Employee {
   // Private variables! New and exciting!
   #salary = 50000;
 
-  constructor( config ) {
-    Object.assign( this, defaultConfig, config );
+  constructor(config) {
+    Object.assign(this, defaultConfig, config);
   }
 
   /*
@@ -30,9 +30,9 @@ class Employee {
     return this.#salary;
   }
 
-  set salary( s ) {
-    s = Number( s );
-    if ( s && s >= this.#salary ) {
+  set salary(s) {
+    s = Number(s);
+    if (s && s >= this.#salary) {
       this.#salary = s;
     }
   }

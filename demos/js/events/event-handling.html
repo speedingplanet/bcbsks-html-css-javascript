@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-  <title>Event Handling</title>
-</head>
-<body>
-  <main class="container">
-    <header class="row">
-      <div class="col">
-        <h1>Event Handling</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css" />
+    <title>Event Handling</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="row">
+        <div class="col">
+          <h1>Event Handling</h1>
+        </div>
+      </header>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary" id="click-button">Click me</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-danger" id="remove-button">Remove handler</button>
+        </div>
       </div>
-    </header>
+    </main>
 
-    <div class="row">
-      <div class="col">
-        <button class="btn btn-primary" id="click-button">Click me</button>
-      </div>
-      <div class="col">
-        <button class="btn btn-danger" id="remove-button">Remove handler</button>
-      </div>
-    </div>
-  </main>
+    <script>
+      let button = document.getElementById('click-button');
+      let removeButton = document.getElementById('remove-button');
 
-  <script>
-    let button = document.getElementById('click-button');
-    let removeButton = document.getElementById('remove-button');
+      function handleClick() {
+        console.log('You clicked on the button');
+      }
 
-    function handleClick() {
-      console.log('You clicked on the button');
-    }
+      button.addEventListener('click', handleClick);
 
-    button.addEventListener('click', handleClick);
+      removeButton.addEventListener(
+        'click',
+        function () {
+          button.removeEventListener('click', handleClick);
+          console.log('Handler removed from the button.');
+        },
+        { once: true }
+      );
 
-    removeButton.addEventListener('click', function() {
-      button.removeEventListener('click', handleClick);
-      console.log('Handler removed from the button.');
-    }, {once: true})
+      button.addEventListener('click', function () {
+        console.log('You clicked on the button (in-line)');
+      });
 
-    button.addEventListener('click', function() {
-      console.log('You clicked on the button (in-line)')
-    });
-
-    button.addEventListener('click', () => {
-      console.log('You clicked on the button (arrow)');
-    })
-  </script>
-</body>
+      button.addEventListener('click', () => {
+        console.log('You clicked on the button (arrow)');
+      });
+    </script>
+  </body>
 </html>

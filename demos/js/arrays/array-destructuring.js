@@ -1,37 +1,37 @@
 /* eslint-disable no-unused-vars */
-const names = [ 'John', 'Dan', 'Tim' ];
+const names = ['John', 'Dan', 'Tim'];
 
-const [ first, second, third ] = names;
-console.log( first ); // John
+const [first, second, third] = names;
+console.log(first); // John
 
-const [ f1, , f3 ] = names;
+const [f1, , f3] = names;
 
-const moreNames = [ 'Andreina', 'Hector', 'Andres' ];
+const moreNames = ['Andreina', 'Hector', 'Andres'];
 
 // Don't do this, adds moreNames as a single element array
 // names.push( moreNames );
 
 // This is better, unwinds/spreads the array into its constituent elements
-names.push( ...moreNames );
+names.push(...moreNames);
 
 // Cheap copy (shallow)
-const copiedNames = [ ...names ];
+const copiedNames = [...names];
 
 // Add two arrays together
 // Older
-let combinedNames = names.concat( moreNames );
+let combinedNames = names.concat(moreNames);
 
 // Newer, maybe better?
-let allNames = [ ...names, ...moreNames ];
+let allNames = [...names, ...moreNames];
 
 function returnTwoThings() {
   // Do whatever
   return [
     'someValue',
-    function() {
-      console.log( 'This does something!' );
+    function () {
+      console.log('This does something!');
     },
   ];
 }
 
-const [ string, fn ] = returnTwoThings();
+const [string, fn] = returnTwoThings();

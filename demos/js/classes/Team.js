@@ -11,23 +11,23 @@ const dojo = {
 };
 
 // Dojo style
-const TeamDojo = dojo.declare( null, {
-  constructor: function( wins, losses ) {
+const TeamDojo = dojo.declare(null, {
+  constructor: function (wins, losses) {
     this.wins = wins;
     this.losses = losses;
   },
-} );
+});
 
 // Prefer this....
 class Team {
   wins = 0;
   losses = 0;
 
-  constructor( wins, losses ) {
+  constructor(wins, losses) {
     this.wins = wins;
     this.losses = losses;
   }
 }
 
 // const team1 = new TeamFn( 20, 10 );
-const team2 = new Team( 20, 10 );
+const team2 = new Team(20, 10);

@@ -37,9 +37,9 @@ export class Vehicle {
   */
 
   // Config style
-  constructor( config = {} ) {
+  constructor(config = {}) {
     // Be cautious if your props are object refs and not primitives
-    Object.assign( this, cloneDeep( defaultConfig ), config );
+    Object.assign(this, cloneDeep(defaultConfig), config);
     // Object.assign( this, config );
 
     Vehicle.vin = Vehicle.vin + 1;
@@ -54,7 +54,7 @@ export class Vehicle {
     return this.make;
   }
 
-  setMake( make ) {
+  setMake(make) {
     this.make = make;
   }
 
@@ -72,7 +72,7 @@ export class Vehicle {
   }
   */
 
-  set mileage( miles ) {
+  set mileage(miles) {
     this._odometer += miles;
   }
 
@@ -95,5 +95,5 @@ export class Vehicle {
 const v = new Vehicle();
 v.mileage = 100;
 v.getMake();
-v.setMake( 'Ford' );
-console.log( v.speed );
+v.setMake('Ford');
+console.log(v.speed);
