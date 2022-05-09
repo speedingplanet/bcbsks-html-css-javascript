@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-const numbers = [ 23, 18, 44, 38 ];
+const numbers = [23, 18, 44, 38];
 
-function add( x, y ) {
+function add(x, y) {
   return x + y;
 }
 

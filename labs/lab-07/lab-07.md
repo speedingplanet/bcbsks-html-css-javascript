@@ -61,7 +61,7 @@ More info here: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 
 ## Part 4
 
-- Wrap the panels in a div. Give the div the class `flex-container`. 
+- Wrap the panels in a div. Give the div the class `flex-container`.
 - Style `flex-container` so that it's `display` value is `flex` and there is space around the elements
   - Experiment with values to get an effect/appearance that you like
 - Add several panels, using copy and paste

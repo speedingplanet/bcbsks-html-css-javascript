@@ -1,80 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css" />
+    <title>Asynchronous Data</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-  <title>Asynchronous Data</title>
-</head>
-
-<body>
-  <main class="container">
-    <header class="row">
-      <div class="col border-bottom mb-2">
-        <h1>Asynchronous Data</h1>
-      </div>
-    </header>
-    <section class="row">
-      <div class="col-4">
-        <div class="row">
-          <div class="col border-bottom mb-2">
-            <!-- Any status messages should go here -->
-            <p class="async-status"></p>
-          </div>
+  <body>
+    <main class="container">
+      <header class="row">
+        <div class="col border-bottom mb-2">
+          <h1>Asynchronous Data</h1>
         </div>
-        <div class="row">
-          <div class="col border-bottom">
-            <button class="btn btn-primary" id="sort-button" disabled>Sort Names</button>
-            <p id="sort-message"></p>
+      </header>
+      <section class="row">
+        <div class="col-4">
+          <div class="row">
+            <div class="col border-bottom mb-2">
+              <!-- Any status messages should go here -->
+              <p class="async-status"></p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col border-bottom mt-2">
-            <div class="form-group mb-3">
-              <label for="filterNames">Filter names: </label>
-              <input type="text" name="filterNames" id="filterNames" class="form-control" disabled>
+          <div class="row">
+            <div class="col border-bottom">
+              <button class="btn btn-primary" id="sort-button" disabled>Sort Names</button>
+              <p id="sort-message"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col border-bottom mt-2">
+              <div class="form-group mb-3">
+                <label for="filterNames">Filter names: </label>
+                <input
+                  type="text"
+                  name="filterNames"
+                  id="filterNames"
+                  class="form-control"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <form id="add-person">
+                <div class="form-group">
+                  <label for="add-name">First Name:</label>
+                  <input type="text" name="firstName" id="first-name" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="add-name">Last Name:</label>
+                  <input type="text" name="lastName" id="last-name" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="add-name">City:</label>
+                  <input type="text" name="city" id="city" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="add-name">State:</label>
+                  <input type="text" name="state" id="state" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="add-name">Date of birth:</label>
+                  <input
+                    type="date"
+                    name="dateOfBirth"
+                    id="dateOfBirth"
+                    value="1990-01-01"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mt-2">
+                  <button class="btn btn-info" type="submit" disabled>Add Person</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="row mt-3">
-          <div class="col">
-            <form id="add-person">
-              <div class="form-group">
-                <label for="add-name">First Name:</label>
-                <input type="text" name="firstName" id="first-name" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="add-name">Last Name:</label>
-                <input type="text" name="lastName" id="last-name" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="add-name">City:</label>
-                <input type="text" name="city" id="city" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="add-name">State:</label>
-                <input type="text" name="state" id="state" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="add-name">Date of birth:</label>
-                <input type="date" name="dateOfBirth" id="dateOfBirth" value="1990-01-01" class="form-control">
-              </div>
-              <div class="mt-2">
-                <button class="btn btn-info" type="submit" disabled>Add Person</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Names list will go here -->
-      <div class="col names-list" id="names-list"></div>
-      <!-- Panel details will go here -->
-      <div class="col panel-list"></div>
-    </section>
-  </main>
-  <script src="lab-09.js" type="module"></script>
-</body>
-
+        <!-- Names list will go here -->
+        <div class="col names-list" id="names-list"></div>
+        <!-- Panel details will go here -->
+        <div class="col panel-list"></div>
+      </section>
+    </main>
+    <script src="lab-09.js" type="module"></script>
+  </body>
 </html>

@@ -14,10 +14,10 @@ async function customGetCount() {
   try {
     let count = await dao.getCount();
     document.querySelector(
-      '.async-status',
+      '.async-status'
     ).textContent = `(async-await) There are ${count} people.`;
-  } catch ( error ) {
-    console.error( 'Something went wrong: ', error );
+  } catch (error) {
+    console.error('Something went wrong: ', error);
   }
 }
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-const numbers = [ 23, 18, 44, 38 ];
+const numbers = [23, 18, 44, 38];
 
-/* export */ function add( x, y ) {
+/* export */ function add(x, y) {
   return x + y;
 }
 
