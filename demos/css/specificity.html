@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specificity</title>
+  <style>
+    /*
+    X-0-0: id selectors
+    0-Y-0: class, attribute, pseudo-class selectors
+    0-0-Z: element and pseduo-element selectors
+    */
+    .container > div {
+      height: 20vh;
+      width: 20vh;
+      border: black 2px solid;
+    }
+
+    .container > div:nth-child(2) {
+      margin: 10vh 0;
+    }
+
+    /*
+    .first {
+      background-color: aqua;
+    }
+
+    div.first {
+      background-color: bisque;
+    }
+
+    #first-div {
+      background-color: yellowgreen;
+    }
+
+    #first-div p {
+      background-color: violet;
+    }
+
+    #first-div.first * {
+      background-color: turquoise;
+    }
+
+    #first-div.first p {
+      background-color: tomato;
+    }
+
+    #container-div #first-div {
+      background-color: seagreen;
+    }
+*/
+</style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>CSS Specificity</h1>
+    </header>
+    <div class="container" id="container-div">
+      <div class="first" id="first-div">
+        <p>First</p>
+      </div>
+      <div class="second">
+        <p>Second</p>
+      </div>
+      <div class="third">
+        <p>Third</p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

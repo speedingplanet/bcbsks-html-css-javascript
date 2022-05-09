@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 07: CSS Selectors</title>
+  <style>
+    .panel {
+      min-height: fit-content;
+      width: 12rem;
+      border: 2px solid black;
+      font-family: sans-serif;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .panel * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .panel>.panel-header {
+      padding: 10px;
+      background-color: lightgray;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      border-bottom: 2px inset darkgray;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+    }
+
+    .panel>.panel-body {
+      padding: 20px;
+    }
+
+    .panel-body>ul {
+      list-style-type: none;
+    }
+
+    /* As a selector */
+    .panel:nth-of-type(2) ul {
+      list-style-type: circle;
+    }
+
+    .panel-selected {
+      box-shadow: 0 0 2px 2px green;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-content: space-between;
+      width: 50vw;
+    }
+
+    .flex-container .panel {
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Lab 07: CSS Selectors</h1>
+    </header>
+    <div>
+      <p id="selected-message">You have selected <span id="selected-count"></span> panels.</p>
+    </div>
+    <div class="flex-container">
+      <div class="panel">
+        <div class="panel-header">
+          <p>John Paxton</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nutley</li>
+            <li>NJ</li>
+            <li>January 31</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Dann Russo</p>
+        </div>
+        <div class="panel-body">
+          <!-- Using the style attribute -->
+          <!-- <ul style="list-style-type: circle;"> -->
+          <ul>
+            <li>Boston</li>
+            <li>MA</li>
+            <li>July 7</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <p>Ann Finck</p>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <li>Nyack</li>
+            <li>NY</li>
+            <li>September 21</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="lab-07.js"></script>
+</body>
+
+</html>

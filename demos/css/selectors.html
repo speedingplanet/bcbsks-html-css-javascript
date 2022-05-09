@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+  <style>
+    /* universal selector */
+    * {
+      border: 0
+    }
+
+    /* tag / element */
+    article {
+      background-color: green;
+    }
+
+    /* class */
+    .box {
+      background-color: yellow;
+    }
+
+    /* id */
+    #target {
+      background-color: orange;
+    }
+
+    /* attribute */
+    /* title starts with... */
+    [title^=What] {
+      background-color: aqua;
+    }
+
+    /* Combinations */
+    /* element.class */
+    p.foo {
+      font-family: monospace;
+    }
+
+    /* .class[attribute] */
+    .bar[title] {
+      font-style: italic;
+    }
+
+    /* .more.than.one.class */
+    .one.two.three {
+      background-color: chartreuse
+    }
+
+    /* Relationships */
+    /* parent > child */
+    #relationships>.container {
+      height: 200px;
+      width: 200px;
+      border: 4px greenyellow dotted
+    }
+
+    .container>.contained {
+      height: 50%;
+      width: 50%;
+      border: 2px red dashed;
+    }
+
+    /* ancestor descendant */
+    .ancestor p {
+      color: red
+    }
+
+
+    /* immediately following sibling */
+    /* John Dan Tim */
+    /* John + Dan */
+    /* John ~ Dan Tim */
+    p.older+p.younger {
+      font-size: 250%;
+    }
+
+    /* any following sibling */
+    #first-sibling~p {
+      background-color: darkgray;
+    } 
+
+    #third-sibling~li {
+      background-color: cadetblue;
+    }
+
+    /* Multiple selectors */
+    h1,
+    h2 {
+      text-decoration: underline;
+    }
+
+    /* Pseudo-classes: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+    #some-list > li:first-child {
+      font-weight: bold;
+    }
+
+    #some-list > li:nth-child(2) {
+      font-style: italic;
+    }
+
+    #some-list > li:nth-child(2n) {
+      text-decoration: underline;
+    }
+
+    #some-list > li:last-child {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    main>section:first-of-type>*:is(div, article) {
+      height: 100px;
+      width: 100px;
+      border: 2px black solid;
+      margin: 15px 0;
+    }
+
+    /* Pseudo-elements: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements */
+    #pseudo-element-target::first-letter {
+      font-size: 200%;
+      font-weight: bold;
+    }
+
+    #pseudo-element-target::before {
+      content: 'before ['
+    }
+
+    #pseudo-element-target::after {
+      content: '] after'
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>CSS Selectors</h1>
+    </header>
+    <section>
+      <nav><h2>Core selectors</h2></nav>
+      <article>Select by tag</article>
+      <div class="box">Select by class</div>
+      <div id="target">Select by id</div>
+      <div title="Whatever">Select by attribute</div>
+    </section>
+    <section>
+      <h2>Combinations</h2>
+      <p class="foo">Paragraph with a class on it</p>
+      <ul class="foo">
+        <li>Not</li>
+        <li>Affected</li>
+      </ul>
+      <ul class="bar" title="fruits">
+        <li>The list has a class and an attribute</li>
+        <li>apples</li>
+        <li>oranges</li>
+        <li>bananas</li>
+      </ul>
+      <div class="two one three">
+        <p>A div with several classes on it</p>
+      </div>
+    </section>
+    <section id="relationships">
+      <h2>Relationships</h2>
+      <div class="container">
+        <p>This is the container</p>
+        <div class="contained">
+          <p>This is the content inside the container</p>
+        </div>
+      </div>
+      <div class="ancestor">
+        <ul>
+          <li>
+            <p>This is a descendant of the div with the class "ancestor"</p>
+          </li>
+          <li>So is this</li>
+          <li>And this</li>
+        </ul>
+        <div>
+          <div>
+            <div>
+              <div>
+                <p>Also a descendant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Yet another descendant</p>
+      </div>
+      <div>
+        <p class="older">Older sibling</p>
+        <p class="younger">Younger sibling</p>
+      </div>
+      <div>
+        <ul>
+          <li>first</li>
+          <li>second</li>
+          <li id="third-sibling">third</li>
+          <li>fourth</li>
+          <li>fifth</li>
+        </ul>
+      </div>
+      <div id="siblings">
+        <p id="first-sibling">First</p>
+        <span>in-between</span>
+        <p>Second</p>
+        <p>Third</p>
+        <span>in-between</span>
+        <p>Fourth</p>
+        <span>in-between</span>
+        <p>Fifth</p>
+      </div>
+    </section>
+    <section>
+      <h2>Pseudo-classes</h2>
+      <ul id="some-list">
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+        <li>fourth</li>
+        <li>fifth</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pseudo-Elements</h2>
+      <ul>
+        <li>Watch what appears on either side of "target" below</li>
+        <li><span id="pseudo-element-target">target</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

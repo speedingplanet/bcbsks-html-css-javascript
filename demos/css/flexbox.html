@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    section>div>div {
+      min-width: 10vw;
+      border: 2px red solid;
+      text-align: center;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .flex-container {
+      display: flex;
+      width: 90vw;
+      border: 2px solid black;
+    }
+
+    .flex-direction {
+      flex-direction: row-reverse;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .justify-content {
+      justify-content:  space-evenly;
+    }
+
+    .align-items {
+      align-items: stretch;
+    }
+
+    .align-content {
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Flexbox</h1>
+    </header>
+    <section>
+      <h2>Stock Flex</h2>
+      <div class="flex-container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+    <section>
+      <h2>flex-direction</h2>
+      <div class="flex-container flex-direction">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+    <section>
+      <h2>flex-wrap</h2>
+      <div class="flex-container flex-wrap" style="width: 22vw">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+    <section>
+      <h2>justify-content</h2>
+      <div class="flex-container justify-content">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+    <section>
+      <h2>align-items</h2>
+      <div class="flex-container align-items" style="height: 30vh">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+      </div>
+    </section>
+    <section>
+      <h2>align-content</h2>
+      <div class="flex-container align-content" style="width: 70vw; height: 70vh">
+        <div style="width: 10vw">A</div>
+        <div style="width: 20vw">B</div>
+        <div style="width: 15vw">C</div>
+        <div style="width: 30vw">D</div>
+        <div style="width: 25vw">E</div>
+        <div style="width: 5vw">F</div>
+        <div style="width: 10vw">G</div>
+        <div style="width: 20vw">H</div>
+        <div style="width: 30vw">I</div>
+        <div style="width: 10vw">J</div>
+      </div>
+    </section>
+    <section>
+      <h2>flex-grow</h2>
+      <div class="flex-container flex-grow" style="width: 90vw">
+        <div style="flex-grow: 1">A</div>
+        <div style="flex-grow: 0; width: 100px">B</div>
+        <div style="flex-grow: 1">C</div>
+        <div style="flex-grow: 2">D</div>
+      </div>
+    </section>
+    <section>
+      <h2>flex-shrink</h2>
+      <div class="flex-container" style="width: 80vw">
+        <div style="flex-shrink: 1; width: 200px">A</div>
+        <div style="flex-shrink: 0; width: 200px">B</div>
+        <div style="flex-shrink: 1; width: 200px">C</div>
+        <div style="flex-shrink: 2; width: 200px">D</div>
+      </div>
+    </section>
+    <section>
+      <h2>flex</h2>
+      <div class="flex-container" style="width: 80vw">
+        <!-- flex: 1 2 is flex-grow: 1, flex-shrink 2 -->
+        <!-- flex: 1 is flex-grow: 1, flex-shrink 0 -->
+        <div style="flex:1 2; width: 200px">A</div>
+        <div style="flex:0 0; width: 200px">B</div>
+        <div style="flex:2 1; width: 200px">C</div>
+        <div style="flex:2 2; width: 200px">D</div>
+      </div>
+    </section>
+    <section>
+      <h2>align-self</h2>
+      <div class="flex-container" style="width: 80vw; height: 50vh; align-items: flex-start;">
+        <div>A</div>
+        <div>B</div>
+        <div style="align-self: center;">C</div>
+        <div>D</div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

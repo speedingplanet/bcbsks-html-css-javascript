@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling elements</title>
+  <style>
+    /* Tag selector */
+    /* All div tags have this style */
+    div {
+      height: 200px;
+      width: 200px;
+      border: 2px black solid;
+      margin: 15px 30px; /* top/bottom left/right */
+    }
+
+    /* Class selector */
+    /* Style with a class */
+    .blue {
+      background-color: blue;
+      color: white;
+    }
+
+    /* ID selector */
+    /* Style by ID */
+    #third-box {
+      background-color: red;
+      color: white;
+    }
+
+    /* Attribute selector */
+    [title] {
+      background-color: green;      
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Styling elements</h1>
+    </header>
+    <section>
+      <div>Alpha</div>
+      <div class="blue">With a class</div>
+      <div id="third-box">Has an ID</div>
+      <div title="Delta Div">Has a <code>title</code> attribute</div>
+    </section>
+  </main>
+</body>
+</html>

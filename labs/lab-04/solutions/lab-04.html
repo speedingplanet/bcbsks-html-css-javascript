@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Card</title>
+  <style>
+    .card-container {
+      height: 200px;
+      width: 200px;
+      border: 2px solid black;
+    }
+
+    .title-card {
+      background-color: lightgray;
+      font-weight: bold;
+      font-size: 150%;
+      text-align: center;
+      border-bottom: 2px dashed darkgray;
+    }
+
+    .title-card > p {
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    .content-card {
+      padding: 0 20px;
+    }
+
+    .no-bullet-points {
+      list-style-type: none;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>User card</h1>
+    </header>
+    <section>
+
+      <!-- Container -->
+      <div class="card-container">
+        <!-- Title bar -->
+        <div class="title-card">
+          <p>John Paxton</p>
+          <!-- <p style="margin: 0">John Paxton</p> -->
+          <!-- John Paxton -->
+          <!-- <h2>John Paxton</h2> -->
+        </div>
+        <!-- Content -->
+        <div class="content-card">
+          <ul class="no-bullet-points">
+            <li>Nutley</li>
+            <li>NJ</li>
+            <li>January 31</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

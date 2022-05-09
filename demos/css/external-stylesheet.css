@@ -1,0 +1,28 @@
+/* Tag selector */
+/* All div tags have this style */
+div {
+  height: 200px;
+  width: 200px;
+  border: 2px black solid;
+  margin: 15px 30px; /* top/bottom left/right */
+}
+
+/* Class selector */
+/* Style with a class */
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+/* ID selector */
+/* Style by ID */
+#third-box {
+  background-color: red;
+  color: white;
+}
+
+/* Attribute selector */
+[title] {
+  background-color: green;      
+  color: white;
+}

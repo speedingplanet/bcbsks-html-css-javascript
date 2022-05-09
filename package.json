@@ -1,0 +1,38 @@
+{
+  "name": "bcbsks-html-css-javascript",
+  "version": "1.0.0",
+  "description": "Class files for BCBSKS's HTML, CSS, and JavaScript course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:root": "http-server -p 3000 --cors -c-1",
+    "server:json": "json-server --watch --port 8000 data/students.json"
+  },
+  "keywords": [],
+  "author": "John Paxton <pax@speedingplanet.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-plugin": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.13.0",
+    "eslint-config-standard": "^17.0.0",
+    "html-loader": "^3.1.0",
+    "http-server": "^14.1.0",
+    "jest": "^27.5.1",
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  }
+}
