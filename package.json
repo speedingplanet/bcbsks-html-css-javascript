@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:demos": "eslint demos/js",
     "format:demos": "prettier --write demos/js",
-    "server:root": "http-server -p 3000 --cors -c-1",
-    "server:json": "json-server --watch --port 8000 data/students.json"
+    "server:root": "http-server -p 3000 --cors -c-1"
   },
   "keywords": [],
   "author": "John Paxton <pax@speedingplanet.com>",
