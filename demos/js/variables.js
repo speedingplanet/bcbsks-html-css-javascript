@@ -1,12 +1,55 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-var */
+/* eslint-disable prefer-const, no-unused-vars */
 
 // let|const variableName = someValue;
 // let x;
 // ...later
 // x = 10;
 
-// Single or double quotes don't matter
+let a;
+a = 10;
+
+let b = 10;
+b = 20;
+b = 'word';
+
+const c = 30;
+// This will fail
+// c = 40;
+
+// eslint-disable-next-line no-lone-blocks
+{
+  let d = 'some value d';
+  const e = 'some value e';
+  console.log('d:', d, 'e:', e);
+}
+
+// This will fail
+// console.log( 'd:', d, 'e:', e );
+
+// eslint-disable-next-line no-lone-blocks
+{
+  var f = 'some value f';
+}
+
+// This will ... not fail?
+console.log('f:', f);
+
+function varScope() {
+  var g = 'some value g';
+  console.log('In function:', g);
+}
+
+// This will fail ...?
+// console.log( 'g:', g );
+
+// Data types
 const aString = 'string';
+
+// prettier-ignore
+// eslint-disable-next-line
+const aDoubleQuotedString = "double-quoted string";
+
 const templateString = `Value of aString: ${aString}`;
 const todayTemplate = `Today is ${Date.now()}`;
 const todayTemplateAsFunction = function () {
@@ -19,7 +62,7 @@ how are you?
 console.log(todayTemplate);
 
 const aNumber = 10;
-const aBigNumber = 10_000_000_000_000;
+const aLongNumber = 10_000_000_000_000_000_000;
 const aBoolean = true;
 const anArray = [1, 2, 3, 4];
 anArray.push(5, 6, 7);
