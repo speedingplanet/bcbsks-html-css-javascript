@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlapping rules</title>
+    <style>
+      html > body > main > div > div.box {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+          sans-serif;
+        background-color: orange !important;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overlapping rules</title>
-  <style>
-    html>body>main>div>div.box {
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      background-color: orange !important;
-    }
+      .box {
+        width: 10vw;
+        height: 10vh;
+        background-color: aquamarine !important;
+      }
+    </style>
+  </head>
 
-    .box {
-      width: 10vw;
-      height: 10vh;
-      background-color: aquamarine !important;
-    }
-
-  </style>
-</head>
-
-<body>
-  <main>
-    <header>
-      <h1>Overlapping CSS Rules</h1>
-    </header>
-    <div id="container">
-      <div class="box" style="background-color: green;">
-        <p>Some text</p>
+  <body>
+    <main>
+      <header>
+        <h1>Overlapping CSS Rules</h1>
+      </header>
+      <div id="container">
+        <div class="box" style="background-color: green">
+          <p>Some text</p>
+        </div>
       </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

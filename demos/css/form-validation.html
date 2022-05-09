@@ -1,60 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
-  <title>Form Validation</title>
-  <style>
-    /* 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.css" />
+    <title>Form Validation</title>
+    <style>
+      /* 
     :valid / :invalid
     :required / :optional
     :in-range / :out-of-range
     */
-    input:invalid {
-      border: 2px red dashed;
-    }
+      input:invalid {
+        border: 2px red dashed;
+      }
 
-    input:valid {
-      box-shadow: 0 0 2px 2px lightgreen;
-    }
+      input:valid {
+        box-shadow: 0 0 2px 2px lightgreen;
+      }
+    </style>
+  </head>
 
-  </style>
-</head>
-
-<body>
-  <main class="container">
-    <header class="row">
-      <div class="col">
-        <h1>Form Validation</h1>
+  <body>
+    <main class="container">
+      <header class="row">
+        <div class="col">
+          <h1>Form Validation</h1>
+        </div>
+      </header>
+      <div class="row">
+        <div class="col-4">
+          <form id="validation-form">
+            <div>
+              <label for="v-required">Required</label>
+              <input type="text" name="v-required" id="v-required" class="form-control" required />
+            </div>
+            <div>
+              <label for="v-pattern">Pattern</label>
+              <input
+                type="text"
+                name="v-pattern"
+                id="v-pattern"
+                class="form-control"
+                required
+                pattern="[A-Z]\p{Letter}+"
+              />
+            </div>
+            <div>
+              <label for="v-minmaxlen">Min/Max length</label>
+              <input
+                type="text"
+                name="v-minmaxlen"
+                id="v-minmaxlen"
+                class="form-control"
+                required
+                minlength="3"
+                maxlength="10"
+              />
+            </div>
+            <div>
+              <label for="v-number">Number</label>
+              <input type="number" name="v-number" id="v-number" class="form-control" />
+            </div>
+            <div class="mt-2"><button class="btn btn-danger" type="submit">Validate</button></div>
+          </form>
+        </div>
       </div>
-    </header>
-    <div class="row">
-      <div class="col-4">
-        <form id="validation-form">
-          <div>
-            <label for="v-required">Required</label>
-            <input type="text" name="v-required" id="v-required" class="form-control" required>
-          </div>
-          <div>
-            <label for="v-pattern">Pattern</label>
-            <input type="text" name="v-pattern" id="v-pattern" class="form-control" required pattern="[A-Z]\p{Letter}+">
-          </div>
-          <div>
-            <label for="v-minmaxlen">Min/Max length</label>
-            <input type="text" name="v-minmaxlen" id="v-minmaxlen" class="form-control" required minlength="3" maxlength="10">
-          </div>
-          <div>
-            <label for="v-number">Number</label>
-            <input type="number" name="v-number" id="v-number" class="form-control">
-          </div>
-          <div class="mt-2"><button class="btn btn-danger" type="submit">Validate</button></div>
-        </form>
-      </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>

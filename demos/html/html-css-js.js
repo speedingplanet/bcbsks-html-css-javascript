@@ -1,1 +1,1 @@
-console.log( 'JavaScript in a separate file' );
+console.log('JavaScript in a separate file');

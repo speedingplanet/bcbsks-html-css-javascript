@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Div and Span </title>
-</head>
-<body>
-  <main>
-    <header>
-      <h1>Div and span</h1>
-    </header>
-    <section>
-      <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are <strong>unstyled</strong> elements.</p>
-      <p>The span is for unstyled in-line content. It does not imply or include a line break or a box.</p>
-      <p>The div is for unstyled block content. It implies and includes a box. Divs are the width of the viewport by default.</p>
-      <p>The semantic elements
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div and Span</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Div and span</h1>
+      </header>
+      <section>
+        <p>
+          The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> tags are
+          <strong>unstyled</strong> elements.
+        </p>
+        <p>
+          The span is for unstyled in-line content. It does not imply or include a line break or a
+          box.
+        </p>
+        <p>
+          The div is for unstyled block content. It implies and includes a box. Divs are the width
+          of the viewport by default.
+        </p>
+        <p>The semantic elements:</p>
         <ul>
           <li><code>&lt;main&gt;</code></li>
           <li><code>&lt;header&gt;</code></li>
@@ -23,10 +32,19 @@
           <li><code>&lt;section&gt;</code></li>
           <li><code>&lt;nav&gt;</code></li>
           <li>...and others</li>
-        </ul> 
-        act like divs. 
-      </p>
-    </section>
-  </main>
-</body>
+        </ul>
+        <p>act like divs.</p>
+      </section>
+      <section>
+        <div>
+          <p>
+            This is some content.
+            <span>This is some content in a <code>&lt;span&gt;</code>.</span> This is some content
+            after the span.
+          </p>
+        </div>
+        <div><p>This is some content inside of a div</p></div>
+      </section>
+    </main>
+  </body>
 </html>
