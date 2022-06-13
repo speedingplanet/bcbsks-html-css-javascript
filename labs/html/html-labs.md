@@ -50,7 +50,7 @@ Each list item should be a link to the appropriate part of the page. Also, at th
 
 ## Tables
 
-Using the data in `people.tsv`, create a file, `people.html`, which has a table rendered in HTML with the following details:
+Using the data in `clients.tsv`, create a file, `clients.html`, which has a table rendered in HTML with the following details:
 
 Table headers are
 
