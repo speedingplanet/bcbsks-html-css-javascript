@@ -9,6 +9,7 @@
 
 - [HTML Validator](https://validator.w3.org/)
 - [Input mode](https://css-tricks.com/everything-you-ever-wanted-to-know-about-inputmode/) (some crossover with JavaScript as well)
+- [All HTML input types rendered](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types)
 
 ## CSS
 
