@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Tables example</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>HTML Tables example</h1>
+      </header>
+      <section>
+        <h2>Basic core table</h2>
+        <table border="1">
+          <tr>
+            <td>Row 1, column 1</td>
+            <td>Row 1, column 2</td>
+            <td>Row 1, column 3</td>
+          </tr>
+          <tr>
+            <td>Row 2, column 1</td>
+            <td>Row 2, column 2</td>
+            <td>Row 2, column 3</td>
+            <td>Row 2, column 4</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Better table</h2>
+        <table border="1">
+            <!-- Typically has a thead and a tbody. The tfoot section is optional. -->
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Team</th>
+              <th>Wins</th>
+              <th>Losses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Kansas City</td>
+                <td>Royals</td>
+                <td>100</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>New York</td>
+                <td>Mets</td>
+                <td>90</td>
+                <td>72</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+                <td colspan="4">Summary data would go here.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
