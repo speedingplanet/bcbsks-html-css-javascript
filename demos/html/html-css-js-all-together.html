@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML and other stuff</title>
+    <style>
+        /* #second-graf is a "selector" */
+        #second-graf {
+            /* All the declarations form a declaration block */
+            text-decoration: underline; /* CSS declaration */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- An h1 element -->
+    <h1>HTML/CSS/JS Experiments</h1>
+
+    <!-- Paragraph element with a style attribute -->
+    <p style="color: red; background-color:cadetblue">This is the way normal text appears. Not bold or larger.</p>
+
+    <!-- Paragraph element with an id attribute -->
+    <p id="second-graf">This is another paragraph</p>
+
+    <p>Click the button: <input type="button" value="Click me" id="click-button" /></p>
+
+    <script>
+        // Get a reference to the button
+        let button = document.querySelector('#click-button');
+
+        // Assign an event handler to the button
+        button.addEventListener('click', function() {
+            // alert('You clicked on the button.');
+            console.log('You clicked on the button.');
+        });
+
+    </script>
+</body>
+</html>
