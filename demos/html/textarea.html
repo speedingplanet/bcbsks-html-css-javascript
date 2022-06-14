@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea example</title>
+    <style>
+        #prose-content {
+            border: dashed 2px gray;
+            border-radius: 50%;
+            padding-top: 20%;
+        }
+
+        #prose-content:focus {
+            border: dotted 2px red;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Textarea demo</h1>
+      </header>
+      <form action="/helpers/reflect">
+        <div>
+          <label for="prose-content">Enter some prose</label>
+          <textarea name="prose-content" id="prose-content" cols="20" rows="20">
+Default text can go here.</textarea
+          >
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
