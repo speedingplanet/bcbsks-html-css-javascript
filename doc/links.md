@@ -165,3 +165,9 @@
 - [Programming Fonts](https://www.programmingfonts.org/)
 - [Colorblindness and palettes](https://davidmathlogic.com/colorblind)
 - [Emmet Cheat Sheet](https://docs.emmet.io/cheat-sheet/)
+
+## Visual Studio
+
+- [Emmet with Visual Studio 2017](https://social.msdn.microsoft.com/Forums/vstudio/en-US/2b523b11-77d4-405f-a379-82e07ae41177/how-to-use-emmet-for-visual-studio-2017-ide?forum=visualstudiogeneral)
+- [Emmet plugin for Visual Studio 2017](https://www.vsixgallery.com/extension/Emmet.net.Sergey%20Rybalkin.9a011f0e-c870-4faa-aaee-536a8040385c/)
+- [GitHub for the Emmet plugin for VS2017](https://github.com/mchomer/emmet.net)
