@@ -23,9 +23,7 @@ router.get('/add-client', function (req, res, next) {
   }
 
   let resContent = `Adding ${firstName} ${lastName} from ${city}, ${state}. <br>`;
-  if (policyHolder) {
-    resContent += `They are${policyHolder ? '' : ' not'} the main policy holder. <br>`;
-  }
+  resContent += `They are${policyHolder ? '' : ' not'} the main policy holder. <br>`;
   if (dependents) {
     resContent += `They have ${dependents === 'no' ? 'no' : ''} dependents`;
   }
