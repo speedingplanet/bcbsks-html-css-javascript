@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select lists/drop-downs</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Select lists and drop-downs</h1>
+      </header>
+      <form action="/helpers/reflect">
+        <section>
+          <h2>Standard select</h2>
+          <div>
+            <label for="fruit-options">Pick a fruit</label>
+            <!-- Passes the value property, or falls back to the label if there isn't a value -->
+            <select name="fruits" id="fruit-options">
+              <option value="apple">Apple</option>
+              <option value="banana">Banana</option>
+              <option selected>Orange</option>
+              <option value="pear">Pear</option>
+              <option value="dragonfruit">Dragonfruit</option>
+            </select>
+          </div>
+        </section>
+        <div><button>Submit form</button></div>
+      </form>
+    </main>
+  </body>
+</html>
