@@ -20,9 +20,6 @@ router.get('/add-client', function (req, res, next) {
   } else if (!city) {
     res.status(404).send('No city found.');
     return;
-  } else if (!state) {
-    res.status(404).send('No state found.');
-    return;
   }
 
   let resContent = `Adding ${firstName} ${lastName} from ${city}, ${state}. <br>`;
