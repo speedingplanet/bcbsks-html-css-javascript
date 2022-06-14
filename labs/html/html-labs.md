@@ -80,11 +80,17 @@ Set the `action` attribute of the `<form>` element to `/helpers/reflect`. Add a 
 
 STOP HERE!
 
+### Forms lab, part 2
+
+Where we add a select field, radio buttons, and a checkbox
+
+Add the following fields: 
+
 - Label: State, field name: state, type: drop down with a selection of states
   - If you want all 50 states, you could use the content here: https://alvinalexander.com/blog/post/jsp/states-for-html-select-option-tag-drop-down-list/
 - Label: Policy holder, field name: policyHolder, type: checkbox
 - Label: Dependents?, field name: dependents, type: radio buttons, values: yes | no
 
-The form should point its `action` attribute to `/add-client`. This URL requires a firstName, lastName, city, and state to be passed. It will return errors if any of those four fields are missing.
+The form should point its `action` attribute to `/add-client`. This URL requires a firstName, lastName, and city to be passed. It will return errors if any of those four fields are missing.
 
-Build the form with the first name, last name, city, and state fields. Try it out to see if it works. Then add the policy holder field, see if it works. Then do the same for the dependents field. 
+STOP HERE
