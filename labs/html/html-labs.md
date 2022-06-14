@@ -75,6 +75,11 @@ Create a file `add-client.html`. It should have a form with the following fields
 - Label: First Name, field name: firstName, type: text
 - Label: Last Name, field name: lastName, type: text
 - Label: City, field name: city, type: text
+
+Set the `action` attribute of the `<form>` element to `/helpers/reflect`. Add a submit button. Fill out and submit the form, see if it returns the information you entered.
+
+STOP HERE!
+
 - Label: State, field name: state, type: drop down with a selection of states
   - If you want all 50 states, you could use the content here: https://alvinalexander.com/blog/post/jsp/states-for-html-select-option-tag-drop-down-list/
 - Label: Policy holder, field name: policyHolder, type: checkbox
