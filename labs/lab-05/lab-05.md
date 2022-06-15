@@ -4,7 +4,7 @@ A series of labs covering data and the Document Object Model.
 
 ## Part 1
 
-Import `people` from `data/people.js`.
+Import `people` from `../data/people.js`.
 Create an array `names` which contains the full name of each user as a string.  
 For example: `['John Paxton', 'Dann Russo']`.  
 Print the `names` array to the console.

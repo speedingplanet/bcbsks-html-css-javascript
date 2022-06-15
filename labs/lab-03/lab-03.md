@@ -4,6 +4,7 @@ Working with functions
 
 ## Part 01
 
+- Add `index.js` to `lab-03.html` using a script tag with a type of "module"
 - Write a function that encapsulates the code from the previous lab.
   - Replace the code in the loop with a call to the function
 
