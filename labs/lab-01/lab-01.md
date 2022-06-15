@@ -5,7 +5,7 @@ Experimenting with JavaScript
 ## Part 1
 
 - In `library.js`, export `a`, `d`, and the `add` function.
-- In `index.js`, import `d` and the `add` function.
+- In `index.js`, import `d` and the `add` function from `library.js`.
   - Print to the console the sum of `d` and 10. Use `add` to get the result.
 - In `lab-01.html`, use a `script` tag to load `index.js`.
 
