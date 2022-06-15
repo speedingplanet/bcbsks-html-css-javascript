@@ -78,6 +78,8 @@ Create a file `add-client.html`. It should have a form with the following fields
 
 Set the `action` attribute of the `<form>` element to `/helpers/reflect`. Add a submit button. Fill out and submit the form, see if it returns the information you entered.
 
+Add a link to `index.html` 
+
 STOP HERE!
 
 ### Forms lab, part 2
@@ -91,6 +93,6 @@ Add the following fields:
 - Label: Policy holder, field name: policyHolder, type: checkbox
 - Label: Dependents?, field name: dependents, type: radio buttons, values: yes | no
 
-The form should point its `action` attribute to `/add-client`. This URL requires a firstName, lastName, and city to be passed. It will return errors if any of those four fields are missing.
+The form should point its `action` attribute to `/add-client`. This URL requires a firstName, lastName, and city to be passed. It will return errors if any of those three fields are missing.
 
 STOP HERE
