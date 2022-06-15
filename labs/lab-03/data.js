@@ -1,7 +1,7 @@
 export const people = [
   'John Paxton',
   'Elijah Snow',
-  'Lin Shi-Min',
+  'Shen Li-min',
   'Angela Cortez',
   'Jenny Sparks',
   'Ted Lasso',
