@@ -30,10 +30,18 @@
         <!-- afterend is here -->
         <div>
           <button id="add-element">Add an element</button>
+          <button id="replace-element">Replace content</button>
         </div>
       </section>
     </main>
     <script>
+      let replaceButton = document.querySelector('#replace-element');
+      replaceButton.addEventListener('click', () => {
+        let container = document.querySelector('#container');
+        container.replaceChildren();
+        container.insertAdjacentHTML('afterbegin', '<p>Replacement paragraph</p>');
+      });
+
       let addButton = document.querySelector('#add-element');
       addButton.addEventListener('click', () => {
         let container = document.querySelector('#container');
