@@ -64,13 +64,14 @@ When we click on the search button, we want the search term to display in the pa
   - A message to display `message`
   - The id of an element on the page where `message` is displayed `target`
 - In `displayMessage`:
-  - Create a paragraph tag
-  - The content of the paragraph tag should be "You searched on ${value}" where value is
-    the content of `#search-text`
+  - Retrieve a refernce to `#target` (the second argument)
   - Clear out any previous children of `#target`
-  - Attach the paragraph as a child of `#target`
-- In the event handler for `#search-button`, call `displayMessage`, passing it the message to display and a destination element
-  for said message
+  - Use `insertAdjacentHTML` to add a paragraph to `#target`
+  - Insert the paragraph as the first child of `#target`
+  - The content of the paragraph tag should be `message` (the first argument), something like
+    'You searched on ${searchText}'.
+- In the event handler for `#search-button`, call `displayMessage`, passing it the message to display
+  and a destination element for said message
 - Try it out! You should be able to enter a search term into the form field; click the button
   and then see a message in the page that says "You searched on ..." and whatever you
   searched on.
