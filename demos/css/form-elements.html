@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS and Form Elements</title>
+    <style>
+      form > div {
+        margin-bottom: 25px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+      }
+
+      .widget {
+        display: flex;
+      }
+
+      .widget > div {
+        flex: 1 0;
+      }
+
+      .form-label {
+        text-align: right;
+        padding: 0 0.2em;
+      }
+
+      #first-name {
+        background-color: red;
+        color: white;
+        border: green 2px dashed;
+      }
+
+      #last-name:focus {
+        outline: red 3px double;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>CSS and Form Elements</h1>
+      </header>
+      <section>
+        <form>
+          <div class="widget">
+            <div class="form-label"><label for="first-name">First Name:</label></div>
+            <div><input type="text" name="firstName" id="first-name" /></div>
+          </div>
+          <div class="widget">
+            <div class="form-label"><label for="last-name">Last Name:</label></div>
+            <div><input type="text" name="lastName" id="last-name" /></div>
+          </div>
+          <div class="widget">
+            <div class="form-label"><label for="city">City:</label></div>
+            <div><input type="text" name="city" id="city" /></div>
+          </div>
+          <div class="widget">
+            <div class="form-label"><label for="state">State:</label></div>
+            <div><input type="text" name="state" id="state" /></div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
