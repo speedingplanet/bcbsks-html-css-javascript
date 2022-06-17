@@ -10,16 +10,19 @@
   </head>
   <body>
     <main>
-      <header class="row">
-        <div class="col">
-          <h1>Lab 05</h1>
-        </div>
+      <header>
+        <h1>Client Search Form</h1>
       </header>
-      <section class="row">
-        <div class="col">
-          <!-- Add the list below -->
+      <form>
+        <!-- div>input:text#search-text -->
+        <div>
+          <label for="search-text">Search on last name:</label>
+          <input type="text" name="searchText" id="search-text" />
+          <!-- button#search-button[type=button] -->
+          <button id="search-button" type="button">Search Clients</button>
         </div>
-      </section>
+      </form>
+      <div id="search-messages"></div>
     </main>
     <script src="index.js" type="module"></script>
   </body>
