@@ -29,7 +29,7 @@
       </section>
       <section>
         <h2>Better table</h2>
-        <table border="1">
+        <table border="1" id="baseball-standings">
           <!-- Typically has a thead and a tbody. The tfoot section is optional. -->
           <thead>
             <tr>
@@ -74,6 +74,8 @@
           <tfoot>
             <tr>
               <td colspan="2">Averages:</td>
+              <td id="average-wins"></td>
+              <td id="average-losses"></td>
             </tr>
             <tr>
               <td colspan="4"><button id="summarize-button">Summarize</button></td>
@@ -85,6 +87,8 @@
     <script>
       document.querySelector('#summarize-button').addEventListener('click', (event) => {
         let table = event.target.closest('table');
+
+        // Find the third td cell in each row under tbody
         let winCells = table.querySelectorAll('tbody td:nth-child(3)');
         let lossCells = table.querySelectorAll('tbody td:nth-child(4)');
         let wins = [];
@@ -92,12 +96,21 @@
 
         // Assumes there are equal counts of wins and losses
         for (let x = 0; x < winCells.length; x++) {
-          wins.push(winCells[x].textContent);
-          losses.push(lossCells[x].textContent);
+          wins.push(Number(winCells[x].textContent));
+          losses.push(Number(lossCells[x].textContent));
         }
 
-        let totalWins = wins.reduce((runningTotal, value) => runningTotal + Number(value), 0);
-        let totalLosses = losses.reduce((runningTotal, value) => runningTotal + Number(value), 0);
+        /* Longer version
+        let totalWins = 0;
+        for (let win of wins) {
+          totalWins = totalWins + win;
+        }
+
+        let averageWins = totalWins / wins.length;
+        */
+
+        let totalWins = wins.reduce((runningTotal, value) => runningTotal + value, 0);
+        let totalLosses = losses.reduce((runningTotal, value) => runningTotal + value, 0);
 
         let averageWins = totalWins / wins.length;
         let averageLosses = totalLosses / losses.length;

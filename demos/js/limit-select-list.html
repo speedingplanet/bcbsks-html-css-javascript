@@ -14,7 +14,7 @@
       <p>Limiting the number of items to be selected in a select list</p>
       <section style="display: flex">
         <div>
-          <select name="select-list" id="select-list" size="5" multiple>
+          <select name="select-list" id="select-list" size="10" multiple>
             <option value="item-1">Item 1</option>
             <option value="item-2">Item 2</option>
             <option value="item-3">Item 3</option>
@@ -32,21 +32,16 @@
     </main>
     <script>
       let selectList = document.querySelector('#select-list');
-      selectList.addEventListener('click', (event) => {
-        let selectedOptions = event.currentTarget.selectedOptions;
-        console.log(`[click] selectedOptions.length ${selectedOptions.length}`);
-        if (selectedOptions.length > 3) {
-          logMessage('[click] Cannot select more than three elements');
-          event.target.selected = false;
-        }
-      });
 
       selectList.addEventListener('change', (event) => {
         let selectedOptions = event.target.selectedOptions;
+        let maxSelected = 3;
         console.log(`[change] selectedOptions.length ${selectedOptions.length}`);
-        if (selectedOptions.length > 3) {
+        if (selectedOptions.length > maxSelected) {
           logMessage('[change] Cannot select more than three elements');
-          event.target.selected = false;
+          while (selectedOptions.length > maxSelected) {
+            selectedOptions[selectedOptions.length - 1].selected = false;
+          }
         }
       });
 
