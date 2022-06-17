@@ -66,3 +66,12 @@ let listItemNames = names.map((name) => {
   item.textContent = name;
   return item;
 });
+
+// Chaining iterators
+// Double all even numbers
+let inputNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let evenNumbers = inputNumbers.filter((x) => x % 2 === 0);
+let doubledNumbers = evenNumbers.map((y) => y * 2);
+
+let fasterEvenNumbers = inputNumbers.filter((x) => x % 2 === 0).map((y) => y * 2);

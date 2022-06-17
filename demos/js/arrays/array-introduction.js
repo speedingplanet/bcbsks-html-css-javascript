@@ -67,6 +67,9 @@ let easternStates = ['NJ', 'NY', 'MA'];
 let westernStates = ['WA', 'OR', 'CA'];
 let allStates = [...easternStates, ...westernStates];
 
+// not ideal because it would modify easternStates
+// easternStates.concat(westernStates);
+
 // Unwind/spread an array into arguments
 easternStates.push(...westernStates);
 
@@ -123,6 +126,8 @@ const people = [
 //
 // 'ab' is greater than 'aa' in JavaScript, or put another way
 // strings higher in alphabetical order are less than those that are lower
+//
+// So this is a descending order (z-a) for lastName
 people.sort((p1, p2) => {
   if (p1.lastName > p2.lastName) {
     return -1;
