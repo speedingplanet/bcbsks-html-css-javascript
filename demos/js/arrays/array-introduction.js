@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 
-// If you know your array is going to be large
-const largeArray = new Array(10000);
-
 // Create an array
 let states = ['NJ', 'MA', 'CA', 'IL', 'FL'];
+
+// If you know your array is going to be large
+const largeArray = new Array(10000);
 
 // Create an array from a string
 let values = '1, 2, 3, 4, 5, 6';
@@ -41,7 +41,7 @@ const lastElement = states.pop();
 states.unshift('CT');
 states.unshift('ME', 'NH', 'VT');
 
-// states is another element shorter
+// states is another element shorter, from the front
 const firstElement = states.shift();
 
 // states.splice(start, length?, replacement?);
