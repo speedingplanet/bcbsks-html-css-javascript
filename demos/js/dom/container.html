@@ -61,7 +61,7 @@
       let replaceListButton = document.querySelector('#replace-list');
       replaceListButton.addEventListener('click', () => {
         let vegetables = ['broccoli', 'spinach', 'zucchini', 'carrots', 'potatoes'];
-        let vegetablesList = [];
+        let vegetablesList = []; // empty array
         for (let vegetable of vegetables) {
           let item = document.createElement('li');
           item.textContent = vegetable;
@@ -69,6 +69,16 @@
         }
 
         let list = document.querySelector('#container>ul');
+        // list.replaceChildren(vegetablesList);
+        /*
+        list.replaceChildren(
+          vegetablesList[0],
+          vegetablesList[1],
+          vegetablesList[2],
+          vegetablesList[3],
+          vegetablesList[4]
+        );
+        */
         list.replaceChildren(...vegetablesList);
       });
 
